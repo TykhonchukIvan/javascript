@@ -1,18 +1,17 @@
-// Найти минимальный элемент массива
-
-
-function minElArray(array){
-        if(arguments.length > 1){
-            return false;
+// Найти сумму четных чисел и их количество в диапозоне от 1 до 99
+function evenSum(a){
+    let countSum = 0;
+    let quantityNum = 0;
+    if(typeof a === 'string'){
+        return false;
+    }
+    for(i = 1; i <= a; i++){
+        if ( i % 2 === 0 ){
+            countSum += i;  // считаем сумму четных чисел
+            quantityNum ++; // считаем количество четных
         }
-        if (typeof array != 'object'){
-            return false;
-        }
-        let min = array[0];
-        for(let i = 1; i < array.length; ++i){
-            if(array[i] < min){
-                min = array[i];
-            }
-        }
-        return min;
+    }
+    let arrayTest=`${countSum} - ${quantityNum}`;
+    return arrayTest;
 }
+

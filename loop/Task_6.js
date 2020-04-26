@@ -1,19 +1,17 @@
-// Сделать реверс массива
+// Вывести число, которое является зеркальным отображением последовательности цифр заданого числа, например задано число 123, вывести 321
 
+function mirrorNumber(a){
+    if(typeof a === 'string'){
+        return 'введите число';
+    }
+    let inline = '';
+    let result;
+    while (a) {
+        result = a % 10;
+        a = Math.floor(a / 10);
+        inline += result + '';
 
-
-function reverseArr(array){
-    if (typeof array != 'object'){
-        return false;
     }
-    if(arguments.length > 1){
-        return false;
-    }
-    let reverseArray = [];
-    for(let i = array.length - 1; 0 <= i; i-- ){
-        reverseArray.push(array[i]);
-    }
-    return reverseArray;
+         return inline;
 }
-
 

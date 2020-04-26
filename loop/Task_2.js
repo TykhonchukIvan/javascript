@@ -1,16 +1,27 @@
+// Проверить простое ли число? 
 
 
-let myArray = [5, 12, 4, 7, 2, 9, 1, 5, 3, 26, 45, 6, 15, 8];
-function findMax(array) {
-    if(arguments.length > 1 || arguments.length == 0){
-        return false
+function isPrime(a){
+    composite = false;
+    if (typeof a === 'string'){
+        return "Вы вводите строку ,а не число"
     }
-    if ( typeof(array) !== 'object' ){
-        return false
+    if ((a % 2 == 0) && (a != 2)) {
+        return "Составное число";
+    } else if (a == 2) {
+        return "Простое число";
+    } else {
+        for (i = 2; i < a; i++) {
+            if (a % i == 0) {
+                composite = true;
+                return "Составное число";
+                break;
+            }
+            else if (composite == false) {
+                return "Простое число";
+                break;
+            }
+        }
     }
-    let max = array[0];
-    for (var i = 0; i < array.length; i++) {
-        if (max < array[i]) max = array[i];
-    }
-    return max;
 }
+

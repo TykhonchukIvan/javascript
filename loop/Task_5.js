@@ -1,21 +1,16 @@
-// Посчитать сумму элементов массива с нечетными индексами
+//Посчитать сумму цифр заданого числа
 
-function sumOddElArray(array){
-       if (typeof array != 'object'){
-              return false;
-       }
-       if(arguments.length > 1){
-              return false;
-       }
-       let oddSum = 0;
-       for (let i = 0; i < array.length; i++) {
-              if(i % 2 != 0 ){
-                     oddSum += array[i];
-              }
-       }
-       return oddSum;
+
+function sumThisNum(a){
+    if(typeof a === 'string'){
+        return 'введите число';
+    }
+    let sum = 0;
+    while (a) {
+        sum += a % 10;
+        a = Math.floor(a / 10);
+    }
+    return sum;
 }
-
-
 
 

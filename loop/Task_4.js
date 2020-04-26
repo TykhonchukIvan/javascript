@@ -1,21 +1,12 @@
-// Найти индекс максимального элемента массива
+//Вычислить факториал числа
 
-function maxElArray(array){
-    if (typeof array != 'object'){
-        return false;
-    }
-    if(arguments.length > 1){
-        return false;
-    }
-    let max = array[0];
-    let indexArray = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] > max) {
-            max = array[i];
-            indexArray = i;
-        }
-    }
-    return indexArray;
+function factorialN(n){
+     if(typeof n === 'string'){
+          return 'Передал строку,а надо число';
+     }
+     let result = 1;
+     for (let i = 1; i <= n; i++){
+          result *= i;
+     }
+     return result;
 }
-
-
