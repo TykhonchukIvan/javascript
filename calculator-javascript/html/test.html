@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- <link rel="stylesheet" href="css/style.css">-->
+    <meta charset="UTF-8">
+    <title>LIST</title>
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script> var assert = chai.assert;</script>
+    <link rel="stylesheet" href="../css/testStyle.css">
+</head>
+<body>
+<script>
+    function startTests() {
+        mocha.run();
+    }
+</script>
+<div class="btn">
+    <button  onclick="startTests()">START TEST</button>
+</div>
+<div id="mocha"></div>
+
+<script src="../js/init.js" defer> </script>
+<script src="../js/controller.js" defer> </script>
+<script src="../js/model.js" defer> </script>
+<script src="../js/logic.js" defer> </script>
+
+<script src="../test/sumTest.js" defer> </script>
+<script src="../test/minusTest.js" defer> </script>
+<script src="../test/multiplyTest.js" defer> </script>
+<script src="../test/divideTest.js" defer> </script>
+<script src="../test/cutDisplayTest.js" defer> </script>
+
+
+</body>
+</html>
