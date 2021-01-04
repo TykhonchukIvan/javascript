@@ -1,0 +1,33 @@
+{
+  "name": "javascript-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TykhonchukIvan/javascript-practice.git"
+  },
+  "author": "Ivan Tykhonchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TykhonchukIvan/javascript-practice/issues"
+  },
+  "homepage": "https://github.com/TykhonchukIvan/javascript-practice#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "mocha-webpack": "^1.1.0",
+    "path": "^0.12.7",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  }
+}
