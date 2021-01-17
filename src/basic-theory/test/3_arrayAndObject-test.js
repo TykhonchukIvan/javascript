@@ -7,7 +7,7 @@ function arrayAndObjectJsTheory(){
   describe('Array and Object js theory', function () {
     it('Checking for string object -> false', function () {
       const exp = false;
-      const agr = 'Ivan';
+      const agr = new String('Ivan');
       const act = arrayAndObject.isObject(agr);
       assert.equal(exp, act);
     })
