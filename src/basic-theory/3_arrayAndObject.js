@@ -117,12 +117,12 @@ function isObject(obj) {
   return Object.getPrototypeOf(obj) === Object.prototype;
 }
 
-function changesObjRec(obj, newObj) {
+function copyObjRec(obj, newObj) {
   for (let prop in obj) {
     let recObj = {}
     if (obj.hasOwnProperty(prop)) {
       if (isObject(obj[prop])) {
-        changesObjRec(obj[prop], recObj)
+        copyObjRec(obj[prop], recObj)
       } else {
         recObj = obj[prop]
       }
