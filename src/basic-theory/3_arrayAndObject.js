@@ -133,4 +133,13 @@ function copyObjRec(obj, newObj) {
 
 const arrayAndObject = { isObject };
 
+const people = [
+  {name: 'A', age: 20, budget: 1000},
+  {name: 'B', age: 12, budget: 2000},
+  {name: 'C', age: 23, budget: 3000},
+  {name: 'D', age: 44, budget: 5000},
+  {name: 'E', age: 14, budget: 8000},
+  {name: 'I', age: 124, budget: 5000}
+]
+
 module.exports.arrayAndObject = arrayAndObject;
