@@ -118,39 +118,87 @@ Array.prototype.multBy = function (n) {
   })
 }
 
-console.log(array.multBy(20))
 const OOP = {}
 
 const person = Object.create(
   {
-    calcAge(){
+    calcAge() {
       console.log(new Date().getFullYear() - this.birthYear)
     }
   },
   {
-  name: {
-    value: 'Ivan',
-    enumerable: true,
-    writable: true,
-    configurable: true,
-  },
-  birthYear: {
-    value: 1994,
-    enumerable: true,
-    writable: true,
-    configurable: true,
-  },
-  age: {
-    get() {
-      return new Date().getFullYear() - this.birthYear
+    name: {
+      value: 'Ivan',
+      enumerable: true,
+      writable: true,
+      configurable: true,
     },
-    set(value) {
-      console.log('Set', value)
+    birthYear: {
+      value: 1994,
+      enumerable: true,
+      writable: true,
+      configurable: true,
+    },
+    age: {
+      get() {
+        return new Date().getFullYear() - this.birthYear
+      },
+      set(value) {
+        console.log('Set', value)
+      }
     }
   }
+)
+
+class Animal {
+
+  static type = 'ANIMAL'
+
+  constructor(options) {
+    this.name = options.name
+    this.age = options.age
+    this.hasTail = options.hasTail
+  }
+
+  voice(){
+    console.log('I am animal')
+  }
+
+}
+
+const animal = new Animal({
+  name: 'Animal',
+  age: 5,
+  hasTail: true
 })
 
-console.log(person.age)
-console.log(person.calcAge())
+
+class Cat extends Animal {
+  static type = 'CAT'
+
+  constructor(options) {
+    super(options);
+    this.color = options.color
+  }
+
+  voice() {
+    super.voice()
+    console.log('I am cat')
+  }
+
+  get getInfo(){
+    return this.age * 10
+  }
+  set setInfo(newAge){
+    this.age = newAge
+  }
+}
+
+const cat = new Cat({
+  name: 'Cat',
+  age: 2,
+  hasTail: true,
+  color: 'black'
+})
 
 module.exports.OOP = OOP
