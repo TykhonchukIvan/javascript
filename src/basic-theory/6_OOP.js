@@ -107,4 +107,50 @@ CopyArray.prototype.copyArr = function (arr) {
   return currentArray.slice()
 }
 
+
 const testArr = new CopyArray([1, 2, 3, 4])
+
+const array = [1, 2, 3, 4, 5]
+
+Array.prototype.multBy = function (n) {
+  return this.map(function (i) {
+    return i * n
+  })
+}
+
+console.log(array.multBy(20))
+const OOP = {}
+
+const person = Object.create(
+  {
+    calcAge(){
+      console.log(new Date().getFullYear() - this.birthYear)
+    }
+  },
+  {
+  name: {
+    value: 'Ivan',
+    enumerable: true,
+    writable: true,
+    configurable: true,
+  },
+  birthYear: {
+    value: 1994,
+    enumerable: true,
+    writable: true,
+    configurable: true,
+  },
+  age: {
+    get() {
+      return new Date().getFullYear() - this.birthYear
+    },
+    set(value) {
+      console.log('Set', value)
+    }
+  }
+})
+
+console.log(person.age)
+console.log(person.calcAge())
+
+module.exports.OOP = OOP

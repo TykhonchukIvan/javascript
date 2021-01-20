@@ -3,9 +3,11 @@ const functionJsTheoryTest = require('./src/basic-theory/test/2_func-test').func
 const arrayAndObjectJsTheory = require('./src/basic-theory/test/3_arrayAndObject-test').arrayAndObjectJsTheory;
 const closuresJsTheoryTest = require('./src/basic-theory/test/4_closures-test').closuresJsTheoryTest
 const objectAndConstructorsJsTheoryTest = require('./src/basic-theory/test/5_objectsAndConstructors-test').objectAndConstructorsJsTheoryTest
+const OOPJsTheoryTest = require('./src/basic-theory/test/6_OOP-test').OOPJsTheoryTest
 
 basicsJsTheoryTest()
 functionJsTheoryTest()
 arrayAndObjectJsTheory()
 closuresJsTheoryTest()
 objectAndConstructorsJsTheoryTest()
+OOPJsTheoryTest()
