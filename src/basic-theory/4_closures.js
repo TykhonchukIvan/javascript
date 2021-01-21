@@ -27,5 +27,22 @@ function sum(x) {
   }
 }
 
+const person = { name: 'Ivan', age: 27, job: 'Frontend' }
+const personTwo = { name: 'Irina', age: 27, job: null }
+
+function printPerson(){
+  console.log(`Person ${this.name} ${this.age} ${this.job}`)
+}
+
+function bindTest(context, fn) {
+  return function (...args) {
+    console.log(args)
+    fn.apply(context, args)
+  }
+}
+
+console.log(bindTest(person, printPerson)())
+// console.log(bindTest(personTwo, printPerson)())
+
 const closures = { sum }
 module.exports.closures = closures;
