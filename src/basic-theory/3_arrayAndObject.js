@@ -131,15 +131,33 @@ function copyObjRec(obj, newObj) {
   }
 }
 
-const arrayAndObject = { isObject };
-
 const people = [
-  {name: 'A', age: 20, budget: 1000},
-  {name: 'B', age: 12, budget: 2000},
-  {name: 'C', age: 23, budget: 3000},
-  {name: 'D', age: 44, budget: 5000},
-  {name: 'E', age: 14, budget: 8000},
-  {name: 'I', age: 124, budget: 5000}
+  { name: 'A', age: 20, budget: 1000 },
+  { name: 'B', age: 12, budget: 2000 },
+  { name: 'C', age: 23, budget: 3000 },
+  { name: 'D', age: 44, budget: 5000 },
+  { name: 'E', age: 14, budget: 8000 },
+  { name: 'I', age: 124, budget: 5000 }
 ]
+
+people.forEach(person => console.log(person))
+const peopleMap = people.map(people => people.name)
+const tempoFilter = people.filter(person => person.age >= 18)
+const amount = people.reduce((total, person) => total + person.budget, 0)
+const peopleFined = people.find(person => person.name === 'A')
+const peopleFinedIndex = people.findIndex(person => person.name === 'A')
+
+const newPeople =
+  people
+    .filter(person => person.budget > 3000)
+    .map(person => {
+      return {
+        info: `${person.name} (${person.age})`,
+        budget: person.budget,
+      }
+    })
+    .reduce((total, person) => total + person.budget, 0)
+
+const arrayAndObject = { isObject };
 
 module.exports.arrayAndObject = arrayAndObject;
