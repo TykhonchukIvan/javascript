@@ -55,7 +55,7 @@ function CheckIsObject(obj) {
   this.obj = obj || {}
 
   function checkIsObject(obj) {
-    if (obj === null) return false
+    if (obj) return false
     return Object.getPrototypeOf(obj) === Object.prototype;
   }
 
@@ -158,12 +158,12 @@ class Animal {
     this.name = options.name
     this.age = options.age
     this.hasTail = options.hasTail
+
   }
 
   voice(){
     console.log('I am animal')
   }
-
 }
 
 const animal = new Animal({
