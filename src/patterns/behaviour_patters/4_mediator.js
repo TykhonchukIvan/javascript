@@ -38,11 +38,11 @@ class ChatRoom {
 }
 
 const ivan = new User('Ivan')
-const ira = new User('Ira')
-const irina = new User('Irina')
+const Any = new User('Any')
+const Any2 = new User('Any2')
 
 const room = new ChatRoom()
 
 room.register(ivan)
-room.register(ira)
-room.register(irina)
+room.register(Any)
+room.register(Any2)
